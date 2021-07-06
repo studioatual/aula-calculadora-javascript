@@ -50,7 +50,8 @@ function init() {
 }
 
 function print(valor) {
-  document.querySelector("#resultado").innerHTML = valor;
+  const valorExibido = converterPontoParaVirgula(valor.toString());
+  document.querySelector("#resultado").innerHTML = valorExibido;
 }
 
 function verificarVirgula(valor, variavel) {
@@ -74,9 +75,21 @@ function injetarTipo(valor) {
   tipo = valor;
 }
 
+function converterVirgulaParaPonto(valor) {
+  return valor.replace(",", ".");
+}
+
+function converterPontoParaVirgula(valor) {
+  return valor.replace(".", ",");
+}
+
 function chamarResultado() {
-  let valor1 = parseFloat(a);
-  let valor2 = parseFloat(b);
+  if (a == "" || b == "") {
+    resultado = 0;
+    return print(resultado);
+  }
+  let valor1 = parseFloat(converterVirgulaParaPonto(a));
+  let valor2 = parseFloat(converterVirgulaParaPonto(b));
   let tipoOperacao = tipo;
   a = "";
   b = "";
