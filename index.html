@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1 class="titulo">Calculadora</h1>
+    <div class="calculadora">
+      <div id="resultado" class="line"></div>
+      <div class="line">
+        <button class="btn" onClick="injetarValor('7')">7</button>
+        <button class="btn" onClick="injetarValor('8')">8</button>
+        <button class="btn" onClick="injetarValor('9')">9</button>
+        <button class="btn" onClick="injetarTipo('dividir')">÷</button>
+      </div>
+      <div class="line">
+        <button class="btn" onClick="injetarValor('4')">4</button>
+        <button class="btn" onClick="injetarValor('5')">5</button>
+        <button class="btn" onClick="injetarValor('6')">6</button>
+        <button class="btn" onClick="injetarTipo('multiplicar')">X</button>
+      </div>
+      <div class="line">
+        <button class="btn" onClick="injetarValor('1')">1</button>
+        <button class="btn" onClick="injetarValor('2')">2</button>
+        <button class="btn" onClick="injetarValor('3')">3</button>
+        <button class="btn" onClick="injetarTipo('subtrair')">-</button>
+      </div>
+      <div class="line">
+        <button class="btn" onClick="injetarValor(',')">,</button>
+        <button class="btn" onClick="injetarValor('0')">0</button>
+        <button class="btn" onClick="chamarResultado()">=</button>
+        <button class="btn" onClick="injetarTipo('somar')">+</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
